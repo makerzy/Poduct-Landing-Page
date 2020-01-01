@@ -15,8 +15,8 @@ header .header {
   
   width: 100%;
   margin: auto;
-  height: 150px;
-  align-items: center;
+  height: 80px;
+  align-items: flex-start;
   background: #fff;
   position: fixed;
   z-index: 3;
@@ -34,7 +34,8 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   color: #333;
-  text-align: center;
+  text-align: right;
+  margin-left: 60%;
   list-style: none;
   text-decoration: none;
   font-size: 1em;
@@ -58,6 +59,10 @@ nav {
     display: block;
     
   }
+  .header {
+    height: 60px;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -73,6 +78,13 @@ nav {
     display: block;
     text-align: left;
   }
+  .navbar ul{
+    width: 100%;
+    justify-items: flex-start;
+    margin: auto;
+    padding: 0;
+  }
+ 
 }
 
 .logo-container {
@@ -89,17 +101,16 @@ nav {
 }
 
 
-.logo-container h3{
+.logo-container h5{
   text-align: left;
   padding-top: 0;
 }
 
 .header-img{
-  width: 12em;
-  height: 4em;
-  padding-top: 1.0em;
-  margin-right: 30px;
-  padding-right: 30px;
+  width: 7em;
+  height: 3em;
+  padding-top: 0;
+
 }
 
 
@@ -121,7 +132,7 @@ nav {
 }
 
 .section-1 {
-  padding-top: 100px;
+  padding-top: 40px;
   position: relative;
 }
 
@@ -135,13 +146,41 @@ nav {
 
 .section-1 .text-area p {
   text-align: center;
-
 }
 
-.video {
-  margin: 40px 0 50px 0;
-  display: flex;
+.section-1 .webuy{
+  display: block;
+  margin: auto;
+}
+
+.section-1 .webuy .webuy-text {
+  flex: 1;
+}
+
+.section-1 .webuy .webuy-carousel {
+  width: 40%;
+  border: black 2px bold;
+  margin: auto;
+  z-index: 2;
+}
+
+.section-1 .webuy{
+  margin-top: 80px;
+}
+
+.webuy-carousel .carousel img{
+  height: 280px;
+  
+  margin: auto;
+  
+}
+
+iframe {
+  width: 50%;
+  margin: auto;
+  display: block;
   justify-content: center;
+  min-height: 315px;
 }
 
 .container {
@@ -149,14 +188,12 @@ nav {
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
-  
+  margin-top: 50px;
 }
-
-
 
 .section-2 h3{
   text-transform: capitalize;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   text-align: center;
 }
 .section-2 p{
